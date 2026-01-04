@@ -1,18 +1,32 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Receptionist Demo</title>
+</head>
+<body style="background: #000; color: white; font-family: sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+
+    <div style="padding: 40px; border: 2px solid #00ff00; border-radius: 20px; text-align: center;">
+        <h1 style="color: #00ff00;">WEBSITE IS LIVE</h1>
+        <p>If you see this box, your GitHub is working.</p>
+        <p style="color: #888;">The Riley button should appear in the bottom right corner.</p>
+    </div>
+
+    <script>
       (function (d, t) {
         var s = d.createElement(t);
         s.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/vapi-public.js";
         s.defer = true;
         s.addEventListener("load", function () {
           window.vapiSDK.run({
-            apiKey: "642dfa19-5c6d-49d5-800e-e6161b6048c4
-", // Found in API Keys tab
-            assistant: "8f5c1b4e-684a-4240-93b5-0d8ff4b58060", // Your Riley ID
-            config: {
-              position: "bottom-right",
-            },
+            apiKey: "642dfa19-5c6d-49d5-800e-e6161b6048c4", 
+            assistant: "8f5c1b4e-684a-4240-93b5-0d8ff4b58060",
+            config: { position: "bottom-right" }
           });
         });
         d.getElementsByTagName("head")[0].appendChild(s);
       })(document, "script");
     </script>
+
+</body>
+</html>
