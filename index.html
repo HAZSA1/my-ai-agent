@@ -2,27 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wellness Partners AI Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Partners AI</title>
+    <!-- 1. The script that loads the AI engine -->
+    <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
 </head>
-<body style="background: #000; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+<body style="background: #000; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden;">
 
-    <div style="padding: 40px; border: 2px solid #00ff00; border-radius: 20px; text-align: center;">
-        <h1 style="color: #00ff00;">WEBSITE IS LIVE</h1>
-        <p>Riley is ready. Click the bubble to start.</p>
+    <div style="padding: 40px; border: 2px solid #00ff00; border-radius: 20px; text-align: center; max-width: 80%;">
+        <h1 style="color: #00ff00;">Riley is Online</h1>
+        <p>Your AI Booking Assistant is ready to take calls.</p>
+        <p style="color: #888;">Click the floating button in the corner to begin.</p>
     </div>
 
-    <!-- This line looks at the file you just created -->
-    <script src="vapi.js"></script>
-
-    <script>
-      window.addEventListener('load', function () {
-        window.vapiSDK.run({
-          apiKey: "642dfa19-5c6d-49d5-800e-e6161b6048c4", 
-          assistant: "8f5c1b4e-684a-4240-93b5-0d8ff4b58060",
-          config: { position: "bottom-right" }
-        });
-      });
-    </script>
+    <!-- 2. The AI Widget Tag -->
+    <vapi-widget
+      public-key="642dfa19-5c6d-49d5-800e-e6161b6048c4"
+      assistant-id="8f5c1b4e-684a-4240-93b5-0d8ff4b58060"
+      mode="voice"
+      theme="dark"
+    ></vapi-widget>
 
 </body>
 </html>
