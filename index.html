@@ -1,19 +1,18 @@
-<!-- Vapi Widget Start -->
-    <script>
+<script>
       (function (d, t) {
         var s = d.createElement(t);
         s.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/vapi-public.js";
         s.defer = true;
         s.addEventListener("load", function () {
           window.vapiSDK.run({
-            apiKey: "642dfa19-5c6d-49d5-800e-e6161b6048c4", // Found in Vapi API Keys tab
+            apiKey: "642dfa19-5c6d-49d5-800e-e6161b6048c4
+", // Found in API Keys tab
             assistant: "8f5c1b4e-684a-4240-93b5-0d8ff4b58060", // Your Riley ID
             config: {
-                position: "bottom-right",
-            }
+              position: "bottom-right",
+            },
           });
         });
         d.getElementsByTagName("head")[0].appendChild(s);
       })(document, "script");
     </script>
-    <!-- Vapi Widget End -->
