@@ -1,40 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Partners AI Demo</title>
-</head>
-<body style="background: #121212; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-
-    <div style="text-align: center; padding: 40px; border: 1px solid #333; border-radius: 15px; background: #1e1e1e;">
-        <h1>Riley is Ready to Help</h1>
-        <p style="color: #888;">Click the green bubble in the bottom right to start a voice call.</p>
-        <p style="font-size: 0.8rem; margin-top: 20px;">Powered by Wellness Partners AI</p>
-    </div>
-
-    <!-- THIS IS THE VAPI WIDGET CODE -->
+<!-- Vapi Widget Start -->
     <script>
-      var vapiInstance = null;
-      const assistant = "8f5c1b4e-684a-4240-93b5-0d8ff4b58060"; // Your specific ID
-      const apiKey = "642dfa19-5c6d-49d5-800e-e6161b6048c4"; // We need to find this in your Vapi dashboard
-
       (function (d, t) {
-        var s = d.createElement(t),
-          options = {
-            assistant: assistant,
-            config: {
-              position: "bottom-right",
-            },
-          };
+        var s = d.createElement(t);
         s.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/vapi-public.js";
         s.defer = true;
         s.addEventListener("load", function () {
-          window.vapiSDK.run(options);
+          window.vapiSDK.run({
+            apiKey: "642dfa19-5c6d-49d5-800e-e6161b6048c4", // Found in Vapi API Keys tab
+            assistant: "8f5c1b4e-684a-4240-93b5-0d8ff4b58060", // Your Riley ID
+            config: {
+                position: "bottom-right",
+            }
+          });
         });
         d.getElementsByTagName("head")[0].appendChild(s);
       })(document, "script");
     </script>
-
-</body>
-</html>
+    <!-- Vapi Widget End -->
